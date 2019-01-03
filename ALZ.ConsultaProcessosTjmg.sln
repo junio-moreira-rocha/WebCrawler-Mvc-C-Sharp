@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALZ.ConsultaProcessosTjmg.Web", "ALZ.ConsultaProcessosTjmg.Web\ALZ.ConsultaProcessosTjmg.Web.csproj", "{E4E561CE-8565-4B5F-B0F6-240489B81B63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{9F3D3ADF-301D-4A0F-9F5F-661F5011582E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALZ.ConsultaProcessosTjmg.Dominio", "ALZ.ConsultaProcessosTjmg.Dominio\ALZ.ConsultaProcessosTjmg.Dominio.csproj", "{3244F2E1-5467-4AD2-B82D-382E22627B1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4E561CE-8565-4B5F-B0F6-240489B81B63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4E561CE-8565-4B5F-B0F6-240489B81B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4E561CE-8565-4B5F-B0F6-240489B81B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4E561CE-8565-4B5F-B0F6-240489B81B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3244F2E1-5467-4AD2-B82D-382E22627B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3244F2E1-5467-4AD2-B82D-382E22627B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3244F2E1-5467-4AD2-B82D-382E22627B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3244F2E1-5467-4AD2-B82D-382E22627B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3244F2E1-5467-4AD2-B82D-382E22627B1A} = {9F3D3ADF-301D-4A0F-9F5F-661F5011582E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A22F2C89-F1EC-42DB-958B-0F4B88356296}
+	EndGlobalSection
+EndGlobal
