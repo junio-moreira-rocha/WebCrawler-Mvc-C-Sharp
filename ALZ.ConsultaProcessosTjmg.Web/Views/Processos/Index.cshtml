@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ALZ.ConsultaProcessosTjmg.Dominio.Processo>
+
+@{
+    ViewBag.Title = "Processos Cadastrados";
+}
+
+<h2>Processos Cadastrados</h2>
+
+<p>
+    @Html.ActionLink("Criar Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroProcesso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Autor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UltimaMovimentacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataConsulta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Situacao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroProcesso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UltimaMovimentacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataConsulta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Situacao)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
