@@ -53,6 +53,10 @@
     <Compile Include="Migrations\201901040022372_MigracaoInicial.Designer.cs">
       <DependentUpon>201901040022372_MigracaoInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901050148148_AtualizacaoTabela.cs" />
+    <Compile Include="Migrations\201901050148148_AtualizacaoTabela.Designer.cs">
+      <DependentUpon>201901050148148_AtualizacaoTabela.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeConfiguration\ProcessoTypeConfiguration.cs" />
@@ -74,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901040022372_MigracaoInicial.resx">
       <DependentUpon>201901040022372_MigracaoInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901050148148_AtualizacaoTabela.resx">
+      <DependentUpon>201901050148148_AtualizacaoTabela.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

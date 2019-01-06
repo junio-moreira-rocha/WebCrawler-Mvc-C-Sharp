@@ -1,12 +1,15 @@
-﻿@model ALZ.ConsultaProcessosTjmg.Dominio.Processo
+﻿@model ALZ.ConsultaProcessosTjmg.Web.ViewModels.Processo.ProcessoExibicaoViewModel
 
 @{
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>Deletar</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Tem certeza de que deseja excluir isso?</h3>
+
+<br />
+
 <div>
     <h4>Processo</h4>
     <hr />
@@ -15,7 +18,7 @@
             @Html.DisplayNameFor(model => model.NumeroProcesso)
         </dt>
 
-        <dd>
+        <dd class="mixed">
             @Html.DisplayFor(model => model.NumeroProcesso)
         </dd>
 
@@ -61,12 +64,21 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para Lista", "Index")
         </div>
     }
 </div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.mixed').mask('0000000-00.0000.0.00.0000');
+        });
+    </script>
+}

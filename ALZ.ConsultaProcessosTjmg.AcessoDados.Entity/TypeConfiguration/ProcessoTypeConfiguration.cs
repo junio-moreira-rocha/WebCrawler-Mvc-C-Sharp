@@ -44,7 +44,7 @@ namespace ALZ.ConsultaProcessosTjmg.AcessoDados.Entity.TypeConfiguration
 
             Property(p => p.DataConsulta)
                 .IsRequired()
-                .HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Computed)
+                //.HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Computed)
                 .HasColumnName("PRC_DATA_CONSULTA");
 
         }

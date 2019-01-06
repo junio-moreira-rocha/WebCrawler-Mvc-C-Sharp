@@ -8,12 +8,11 @@ using System.Web;
 
 namespace ALZ.ConsultaProcessosTjmg.Web.AutoMapper
 {
-    public class DominioParaViewModelProfile : Profile
+    public class ViewModelParaDominioProfile : Profile
     {
         protected override void Configure()
         {
-            Mapper.CreateMap<Processo, ProcessoExibicaoViewModel>();
-            Mapper.CreateMap<Processo, ProcessoViewModel>();
+            Mapper.CreateMap<ProcessoViewModel, Processo>();
         }
     }
 }

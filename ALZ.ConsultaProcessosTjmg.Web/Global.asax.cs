@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ALZ.ConsultaProcessosTjmg.Web.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,7 @@ namespace ALZ.ConsultaProcessosTjmg.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            AutoMapperConfig.Configurar();
         }
     }
 }
