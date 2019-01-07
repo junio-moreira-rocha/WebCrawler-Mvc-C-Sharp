@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -118,6 +119,7 @@ namespace ALZ.ConsultaProcessosTjmg.Web.Controllers
             if (ModelState.IsValid)
             {
                 Processo processo = Mapper.Map<ProcessoViewModel, Processo>(viewModel);
+                processo.DataConsulta = DateTime.Now;
                 db.Processos.Add(processo);
                 db.SaveChanges();
                 return RedirectToAction("Index");

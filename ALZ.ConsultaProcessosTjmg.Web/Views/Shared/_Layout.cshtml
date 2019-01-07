@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Consultar Processos no TJMG</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -22,8 +22,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Processos Cadastrados", "Index", "Processos")</li>
-                    <li>@Html.ActionLink("Cadastrar Novo", "Busca", "Processos")</li>
-                    <li>@Html.ActionLink("Filtrar Processos", "FiltrarPorNumero", "Processos")</li>
+                    <li>@Html.ActionLink("Buscar no TJMG", "Busca", "Processos")</li>
+                    <li>@Html.ActionLink("Filtrar", "FiltrarPorNumero", "Processos")</li>
+                    <li>@Html.ActionLink("Criar", "Create", "Processos")</li>
                 </ul>
             </div>
         </div>
@@ -32,7 +33,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Consultar Processos no TJMG</p>
         </footer>
     </div>
 

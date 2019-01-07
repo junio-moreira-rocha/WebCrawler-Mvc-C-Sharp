@@ -1,12 +1,12 @@
 ﻿@model ALZ.ConsultaProcessosTjmg.Web.ViewModels.Processo.ProcessoViewModel
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar Processos";
 }
 
 <h2>Editar Processo</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "Processos", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "teste", id = "teste2" }))
 {
     @Html.AntiForgeryToken()
 
@@ -20,7 +20,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.NumeroProcesso, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.NumeroProcesso, new { htmlAttributes = new { @class = "mixed form-control", disabled = "disabled", @readonly = "readonly" } })
+                @Html.EditorFor(model => model.NumeroProcesso, new { htmlAttributes = new { @class = "mixed form-control"} })
                 @Html.ValidationMessageFor(model => model.NumeroProcesso, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -82,6 +82,9 @@
     <script>
         $(document).ready(function () {
             $('.mixed').mask('0000000-00.0000.0.00.0000');
+        });
+        $("#teste2").submit(function (event) {
+            $('.mixed').cleanVal();
         });
     </script>
 }

@@ -1,16 +1,16 @@
-﻿@model ALZ.ConsultaProcessosTjmg.Dominio.Processo
+﻿@model ALZ.ConsultaProcessosTjmg.Web.ViewModels.Processo.ProcessoViewModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Criar Processos";
 }
 
-<h2>Create</h2>
+<h2>Criar</h2>
+<br />
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Processo</h4>
         <hr />
@@ -18,7 +18,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.NumeroProcesso, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.NumeroProcesso, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.NumeroProcesso, new { htmlAttributes = new { @class = "mixed form-control" } })
                 @Html.ValidationMessageFor(model => model.NumeroProcesso, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -57,16 +57,21 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Criar" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar para Lista", "Index")
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+            $('.mixed').mask('0000000-00.0000.0.00.0000');
+        });
+    </script>
 }
